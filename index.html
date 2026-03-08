@@ -86,7 +86,7 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--bg);
+      color: var(--white);
       background: var(--dark);
       border: 1px solid var(--dark);
       padding: 0.4rem 1rem;
@@ -530,12 +530,10 @@
     }
 
     .about-photo {
-      width: 220px;
-      height: 220px;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--accent-light);
-      box-shadow: 0 0 0 6px rgba(45, 158, 107, 0.15);
       flex-shrink: 0;
     }
 
@@ -543,7 +541,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center center;
       filter: grayscale(100%);
     }
 
@@ -732,6 +730,29 @@
       background: linear-gradient(to bottom, transparent 60%, rgba(10, 22, 40, 0.4) 100%);
     }
 
+    .hero-image-quote {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1.8;
+      color: var(--navy);
+      font-family: 'Cascadia Mono', monospace;
+      width: 85%;
+    }
+
+    .hero-image-quote span {
+      background: var(--white);
+      padding: 0.1em 0.3em;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1.2rem 2rem; }
@@ -793,6 +814,10 @@
     <div class="hero-image-panel">
       <div class="hero-image-frame">
         <img src="marble.png" alt="abstract marble texture"/>
+        <div class="hero-image-quote">
+          <span>Information is currency;</span><br/>
+          <span>disinformation is a weapon.</span>
+        </div>
       </div>
     </div>
   </section>
